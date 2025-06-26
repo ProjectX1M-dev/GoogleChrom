@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingHub.Mk Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">TradingHub.Mk Settings</h1>
+            <p class="subtitle">Configure your Pine Script optimization preferences</p>
+        </header>
+        
+        <main class="main">
+            <div class="settings-section">
+                <h2 class="section-title">Optimization Settings</h2>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="autoOptimize">Auto-Optimize Strategies</label>
+                        <p class="setting-description">Automatically optimize parameters when a new strategy is detected</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle">
+                            <input type="checkbox" id="autoOptimize">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="optimizationDepth">Optimization Depth</label>
+                        <p class="setting-description">How thorough the parameter optimization should be</p>
+                    </div>
+                    <div class="setting-control">
+                        <select id="optimizationDepth" class="select-input">
+                            <option value="basic">Basic (Fast)</option>
+                            <option value="standard">Standard (Balanced)</option>
+                            <option value="deep">Deep (Thorough)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="maxIterations">Max Iterations</label>
+                        <p class="setting-description">Maximum number of optimization iterations (10-1000)</p>
+                    </div>
+                    <div class="setting-control">
+                        <input type="number" id="maxIterations" class="number-input" min="10" max="1000" value="100">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h2 class="section-title">Interface Settings</h2>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="theme">Theme</label>
+                        <p class="setting-description">Choose your preferred interface theme</p>
+                    </div>
+                    <div class="setting-control">
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="theme" value="light" id="themeLight">
+                                <span class="radio-custom"></span>
+                                Light
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="theme" value="dark" id="themeDark">
+                                <span class="radio-custom"></span>
+                                Dark
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="theme" value="auto" id="themeAuto">
+                                <span class="radio-custom"></span>
+                                Auto
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="notifications">Notifications</label>
+                        <p class="setting-description">Show notifications when optimization completes</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle">
+                            <input type="checkbox" id="notifications">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="showAdvanced">Show Advanced Options</label>
+                        <p class="setting-description">Display advanced optimization parameters</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle">
+                            <input type="checkbox" id="showAdvanced">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h2 class="section-title">Performance Settings</h2>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="cacheResults">Cache Results</label>
+                        <p class="setting-description">Cache optimization results to improve performance</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle">
+                            <input type="checkbox" id="cacheResults">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label class="setting-label" for="parallelProcessing">Parallel Processing</label>
+                        <p class="setting-description">Use multiple threads for faster optimization</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle">
+                            <input type="checkbox" id="parallelProcessing">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="actions-section">
+                <button class="btn btn-primary" id="saveBtn">
+                    <span class="btn-icon">💾</span>
+                    Save Settings
+                </button>
+                
+                <button class="btn btn-secondary" id="resetBtn">
+                    <span class="btn-icon">🔄</span>
+                    Reset to Defaults
+                </button>
+                
+                <button class="btn btn-secondary" id="exportBtn">
+                    <span class="btn-icon">📤</span>
+                    Export Settings
+                </button>
+            </div>
+            
+            <div class="status-message" id="statusMessage"></div>
+        </main>
+    </div>
+    
+    <script src="settings.js"></script>
+</body>
+</html>

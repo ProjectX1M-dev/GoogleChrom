@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingHub.Mk</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">TradingHub.Mk</h1>
+            <p class="subtitle">Pine Script Optimizer</p>
+        </header>
+        
+        <main class="main">
+            <div class="status-section">
+                <div class="status-indicator" id="connectionStatus">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Connecting...</span>
+                </div>
+            </div>
+            
+            <div class="actions-section">
+                <button class="btn btn-primary" id="analyzeBtn">
+                    <span class="btn-icon">📊</span>
+                    Analyze Strategy
+                </button>
+                
+                <button class="btn btn-secondary" id="optimizeBtn">
+                    <span class="btn-icon">⚡</span>
+                    Optimize Parameters
+                </button>
+                
+                <button class="btn btn-secondary" id="settingsBtn">
+                    <span class="btn-icon">⚙️</span>
+                    Settings
+                </button>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-label">Version:</span>
+                    <span class="info-value">1.0.0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Status:</span>
+                    <span class="info-value" id="extensionStatus">Ready</span>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

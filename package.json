@@ -1,0 +1,25 @@
+{
+  "name": "tradinghub-mk",
+  "version": "1.0.0",
+  "description": "Chrome extension for Pine Script strategy optimization on TradingView",
+  "main": "background.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "build": "npm run lint && npm run test"
+  },
+  "keywords": ["chrome-extension", "tradingview", "pine-script", "trading"],
+  "author": "TradingHub.Mk Team",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "jest": "^29.7.0",
+    "@types/chrome": "^0.0.268"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": ["**/test/**/*.test.js"]
+  }
+}
